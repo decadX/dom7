@@ -72,6 +72,10 @@ function scrollTo(...args) {
         el.scrollLeft = newLeft;
         done = true;
       }
+      
+      if (!animateLeft && !animateTop) {
+        done = true;
+      }
 
       if (done) {
         if (callback) callback();
